@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 2em;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.5em;
+}
+
+/* Typography */
+
+body * {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: hsl(228, 12%, 48%);
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0.5em 0;
+    color: hsl(212, 21%, 14%);
+}
+
+p {
+    line-height: 2em;
+    color: hsl(228, 12%, 48%);
+}
+
+h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 35px;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+}
+
+.prices p {
+    text-decoration: line-through;
+    margin-left: 1em;
+}
+
+
+/* Picture */
+
+.picture {
+    background-image: url(images/image-product-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;   
+    height: 35%;
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+/* Info Text */
+
+.info {
+    padding: 2.4em;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.btn {
+    display: flex;
+    background-color: hsl(158, 36%, 37%);
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0;
+    border-radius: 0.5em;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: hsl(156, 35%, 24%);
+}
+
+img {
+    margin-right: 1em;
+}
+
+@media (min-width: 1440px) {
+    .container {
+        margin-top: 150px;
+        flex-direction: row;
+        max-width: 700px;
+        height: 500px;
+    }
+
+    .picture {
+    background-image: url(images/image-product-desktop.jpg);  
+    width: 50%;
+    height: 100%;
+    border-radius: 0.5em  0 0 0.5em;
+}
+
+.info {
+    width: 50%;
+}
+}
